@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FocusTimer</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./src/css/style.css">
+        <link rel="stylesheet" href="./src/css/responsibility.css">
+        <link rel="stylesheet" href="./src/css/keyframes.css">
+
+        <script type="module" src="./src/js/main.js" defer></script>
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    </head>
+    <body>
+        <div class="app">
+            <button id="toggle-mode">
+                <i class="ph-bold ph-sun"></i>
+                <i class="ph-bold ph-moon"></i>
+            </button>
+            <div class="timer">
+                <div class="time">
+                    <span id="minutes">25</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                </div>
+
+                <div class="controls">
+                    <button id="button-play">
+                        <i class="ph ph-play-circle"></i>      
+                    </button>
+        
+                    <button id="button-pause">
+                        <i class="ph ph-pause-circle"></i>
+                    </button>
+        
+                    <button id="button-set">
+                        <i class="ph ph-timer"></i>
+                    </button>
+        
+                    <button id="button-reset">
+                        <i class="ph ph-stop-circle"></i>           
+                    </button>
+        
+                    <button id="button-plusMinutes">
+                        <i class="ph ph-plus-circle"></i>      
+                    </button>
+        
+                    <button id="button-reduceMinutes">
+                        <i class="ph ph-minus-circle"></i>      
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="cards">
+                <button class="card" id="cardTree" data-category="cardTree">
+                    <i class="ph ph-tree"></i>
+                </button>
+                <button class="card " id="cardCloudRain" data-category="cardCloudRain">
+                    <i class="ph ph-cloud-rain"></i>
+                </button>
+                <button class="card" id="cardFlames" data-category="cardFlames">
+                    <i class="ph ph-flame"></i>
+                </button>
+                <button class="card" id="cardCoffeeShop" data-category="cardCoffeeShop">
+                    <i class="ph ph-storefront"></i>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

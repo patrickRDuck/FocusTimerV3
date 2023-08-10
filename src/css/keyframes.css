@@ -1,0 +1,7 @@
+@keyframes activingCard {
+    100% {
+        background-color: var(--bg-active);
+        box-shadow: -1px 3px 12px 1px rgba(3,122,158,0.5);
+        color: var(--fc-active);
+    }
+}

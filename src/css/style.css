@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+
+    --bg-lightMode: #FFF;
+    --bg-darkMode: #121214;;
+
+    --fc-primary: #323238;
+
+    --bg-active: hsla(194, 97%, 31%, 1);
+    --fc-active: #FFF;
+
+    --bg-cards: hsla(240, 9%, 89%, 1);
+}
+
+html:not(.running) #button-pause,
+html:not(.running) #button-reset,
+html:not(.dark) #toggle-mode .ph-sun {
+    display: none;
+}
+
+html.running #button-play,
+html.running #button-set,
+html.dark #toggle-mode .ph-moon {
+    display: none;
+}
+
+html.pause #button-pause,
+html.pause #button-set {
+    display: none;
+}
+
+html.pause #button-reset {
+    display: block;
+}
+
+.dark body{
+    background-color: var(--bg-darkMode);
+
+    --fc-primary:  #f0efef;
+    --bg-cards: #29292E;
+    --bg-active: hsla(195, 74%, 15%, 1);
+}
+
+body {
+    background-color: var(--bg-lightMode);
+}
+
+.app {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+
+    position: relative;
+}
+
+#toggle-mode {
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+
+    font-size: 3.50rem;
+    background: transparent;
+    color: var(--fc-primary);
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.7rem;
+}
+
+.timer .time {
+    font-size: 12.6rem;
+    font-weight: 500;
+    color: var(--fc-primary);
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.timer .controls {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.timer .controls button {
+    background: transparent;
+
+    font-size: 5rem;
+    color: var(--fc-primary);
+}
+
+.app .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.cards .card {
+    position: relative;
+
+    height: 15rem;
+    width: 13rem;
+
+    font-size: 5rem;
+    color: var(--fc-primary);
+
+    background-color: var(--bg-cards);
+    border-radius: 2rem;
+}
+
+.cards .card.active {
+    animation: activingCard 300ms ease-in forwards;
+}

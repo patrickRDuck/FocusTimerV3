@@ -1,0 +1,35 @@
+@media (max-width: 850px) {
+    .app {
+
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #toggle-mode {
+        font-size: 3rem;
+        top: 0.7rem;
+        right: 1rem;
+    }
+
+    .timer {
+        margin-top: 6rem;
+    }
+
+    .timer .time {
+        font-size: 10rem;
+    }
+
+    .timer .controls {
+        gap: 2rem;
+        font-size: 3rem;
+    }
+
+    .cards {
+        padding-bottom: 2rem;
+    }
+
+    .cards .card {
+        height: 13rem;
+        width: 11rem;
+    }
+}
